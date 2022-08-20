@@ -1,0 +1,246 @@
+.a-wrapper {
+  width: 100vw;
+  /* height: 110vh; */
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.a-left {
+  /* height: 100%; */
+  width: 50%;
+  overflow: hidden;
+}
+
+.a-left img {
+  /* height: 100%; */
+  width: 100%;
+  transform: scale(1.1);
+}
+
+.a-right {
+  width: 50%;
+  /* height: 100%; */
+}
+
+.a-rightParent {
+  margin: 2.5rem 5rem;
+}
+
+.a-mainLogo {
+  height: 66px;
+  width: 72px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.a-mainLogo img {
+  /* height: 100%; */
+  width: 100%;
+}
+
+.appForm-wrapper {
+  margin-top: 32px;
+}
+
+.appForm-wrapper form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input-sec {
+  margin: 8px 0;
+}
+
+label {
+  color: var(--gray);
+  font-size: 18px;
+  display: block;
+}
+
+.app-i {
+  width: 12rem;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background: rgba(60, 65, 223, 0.04);
+  outline: none;
+  margin-top: 6px;
+}
+
+#email,
+#qualification {
+  width: 30.5rem;
+}
+
+.upload-wrapper {
+  height: 160px;
+  width: 100%;
+  text-align: center;
+}
+
+.upload-parent {
+  width: 186px;
+  border: 2px dashed var(--conUsCol);
+  margin: 1rem auto;
+  border-radius: 10px;
+  padding: 12px;
+}
+.upload-txt {
+  width: 95%;
+  height: 20%;
+  border: 2px solid #3a5a75;
+  border-radius: 5px;
+  color: #3a5a75;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.upload-txt:hover {
+  cursor: pointer;
+}
+
+.upload-txt p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.a-btn-wrapper {
+  margin-top: 3.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* .a-btn {
+} */
+
+.a-btn button {
+  padding: 16px 78px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  background: var(--btnCol);
+  border: 2px solid var(--btnCol);
+  border-radius: 5px;
+}
+
+.a-btn button:hover {
+  cursor: pointer;
+  color: var(--btnCol);
+  background: #fff;
+  text-shadow: 1px 1px 5px 1px solid var(--btnCol);
+}
+
+/* a-btn */
+
+/* Responsive */
+@media screen and (max-width: 1110px) {
+  .a-mainLogo {
+    height: 52px;
+    width: 64px;
+  }
+
+  .sectionTitle {
+    font-size: 32px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  .app-i {
+    padding: 0.5 0.8rem;
+  }
+
+  #email,
+  #qualification,
+  .app-i {
+    width: 16rem;
+  }
+}
+
+@media screen and (max-width: 810px) {
+}
+
+@media screen and (max-width: 400px) {
+  .a-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .a-left {
+    width: 60%;
+    margin: 12px auto;
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 1110px) {
+  .appForm-wrapper form {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .a-wrapper {
+    flex-direction: column;
+  }
+  .a-right {
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    box-shadow: var(--boxShadow);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .a-left {
+    display: none;
+  }
+  .a-right {
+    width: 72%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .a-right {
+    width: 82%;
+  }
+  .a-btn button {
+    padding: 16px 64px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .upload-wrapper,
+  .a-btn-wrapper {
+    margin-left: -24px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .a-right {
+    width: 94%;
+  }
+  #email,
+  #qualification,
+  .app-i {
+    width: 12rem;
+  }
+
+  .upload-parent {
+    width: 168px;
+  }
+  .a-btn button {
+    padding: 15px 56px;
+  }
+
+  .upload-wrapper,
+  .a-btn-wrapper {
+    margin-left: -49px;
+  }
+
+  .sectionTitle {
+    margin-top: 10px;
+    margin-left: -12px;
+  }
+} ;

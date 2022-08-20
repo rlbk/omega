@@ -1,0 +1,49 @@
+.six-steps {
+  margin: 80px 160px;
+}
+
+.s-steps {
+  margin: 60px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.steps {
+  margin: 32px auto;
+}
+
+.s-steps img {
+  margin: 44px auto;
+}
+
+/* responsice */
+@media screen and (max-width: 1110px) {
+  .six-steps {
+    margin: 100px 40px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .six-steps {
+    margin: 100px 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .s-steps img {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .s-steps img {
+    height: 116px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .six-steps {
+    margin: 70px 10px;
+  }
+  .s-steps h1 {
+    font-size: 18px;
+  }
+}

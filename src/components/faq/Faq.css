@@ -1,0 +1,25 @@
+.faq-wrapper {
+  margin: 60px 200px;
+}
+
+.faq-question {
+  margin: 32px 0;
+  text-align: start;
+}
+
+@media screen and (max-width: 1110px) {
+  .faq-wrapper {
+    margin: 40px 40px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .faq-wrapper {
+    margin: 60px 70px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .faq-wrapper {
+    margin: 0 20px;
+  }
+}

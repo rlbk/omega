@@ -1,0 +1,116 @@
+.contact-form {
+  position: relative;
+  width: 56vw;
+  height: 15rem;
+  background: var(--conUsCol);
+  margin: 60px auto;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 3rem;
+  /* margin-top: 120px; */
+  top: 95px;
+}
+
+.cf-left {
+  color: #fff;
+  text-align: start;
+}
+
+.cf-title {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.cf-left > :nth-child(2) {
+  font-size: 18px;
+}
+
+.cf-right form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.con-i {
+  width: 15rem;
+  height: 2rem;
+  margin: 0.4rem 0;
+  background: #fff;
+  color: var(--gray);
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  padding: 0 1.4rem;
+}
+
+.s-btn {
+  padding: 10px 20px;
+  background: #fff;
+  color: var(--gray);
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin-top: 1rem;
+}
+
+.s-btn:hover {
+  cursor: pointer;
+  color: var(--defaultBlack);
+  font-weight: bold;
+  transition: 1s ease;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 820px) {
+  .cf-title {
+    font-size: 28px;
+  }
+  .con-i {
+    width: 13rem;
+    height: 1.8rem;
+  }
+
+  .contact-form {
+    padding: 0rem 2rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  ntact-form {
+    padding: 0rem 1rem;
+  }
+  .cf-title {
+    font-size: 20px;
+  }
+  .cf-left > :nth-child(2) {
+    font-size: 16px;
+  }
+  .con-i {
+    width: 10rem;
+    padding: 0 1rem;
+  }
+  .contact-form {
+    padding: 0rem 1.5rem;
+  }
+}
+@media screen and (max-width: 416px) {
+  .contact-form {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+  }
+  .cf-left {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 416px) {
+  .contact-form {
+    width: 72vw;
+  }
+} ;
