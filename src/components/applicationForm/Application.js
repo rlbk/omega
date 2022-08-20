@@ -179,7 +179,6 @@ const Application = () => {
                     <img src={CvUpload} alt="upload your cv" />
                   </div>
                   <div className="upload-txt">
-                    <input type="file" name="cv" onChange={inputHandler} />
                     <p>Upload Your CV</p>
                   </div>
                 </div>
