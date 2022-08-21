@@ -10,9 +10,9 @@
 
 body {
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+
   background: rgba(60, 65, 223, 0.04);
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .button {
