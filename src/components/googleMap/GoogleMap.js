@@ -36,12 +36,14 @@ export default function GoogleMap() {
  */
 
 /* FOR USING GOOGLE LONGITUDE AND LATIDUGE UNCOMMENT THIS */
-/* 
+
 const GoogleMap = () => {
   useEffect(() => {
     const ifameData = document.getElementById("iframeId");
-    const lat = 27.717245;
-    const lon = 85.323959;
+    // const lat = 27.69284;
+    // const lon = 85.338374;
+    const lat = 27.688354542728447;
+    const lon = 85.33388159261095;
     ifameData.src = `https://maps.google.com/maps?q=${lat},${lon}&hl=es;&output=embed`;
   });
 
@@ -59,10 +61,9 @@ const GoogleMap = () => {
     </div>
   );
 };
- */
 
 /* FOR USING SIMPLE GOOGLE MAP IFRAM HTML CODE */
-
+/* 
 const GoogleMap = () => {
   return (
     <div className="google-map">
@@ -82,5 +83,5 @@ const GoogleMap = () => {
     </div>
   );
 };
-
+*/
 export default GoogleMap;

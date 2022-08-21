@@ -97,6 +97,11 @@ label {
   padding-bottom: 10px;
 }
 
+.upload-txt a {
+  text-decoration: none;
+  color: #3a5a75;
+}
+
 .upload-txt:hover {
   cursor: pointer;
 }

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "emailjs-com";
 
 import "./Application.css";
 import AppImage from "../images/appImage.jpeg";
@@ -8,6 +9,7 @@ import Typical from "react-typical";
 // import axios from "axios";
 
 const Application = () => {
+  const form = useRef();
   const [data, setData] = useState({
     fname: "",
     lname: "",
@@ -25,18 +27,51 @@ const Application = () => {
     setData({ ...data, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  //SEND TO EMAIL
+  const sendToEmail = (e) => {
     e.preventDefault();
 
-    /*  await axios
-      .post("/register", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      })
-      .then((e) => window.alert("sucess"))
-      .catch((e) => console.log(e));
- */
+    const { fname, lname, email, dob, number, qualification } = data;
+
+    if (
+      fname.length === 0 ||
+      lname.length === 0 ||
+      email.length === 0 ||
+      dob.length === 0 ||
+      number.length === 0 ||
+      qualification.length === 0
+    ) {
+      window.alert("Please fill all the fields");
+      return;
+    } else {
+      emailjs
+        .sendForm(
+          "service_juo2vsv",
+          "template_per7pha",
+          form.current,
+          "jqApy5qIqJnjB0eSJ"
+        )
+        .then((res) => {
+          window.alert("Registered Sucess");
+          setData({ name: "", email: "", number: "" });
+        })
+        .catch((err) => window.alert(err));
+    }
+  };
+
+  //SEND DATA TO BACKEND
+  /*  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+      // await axios
+      // .post("/register", formData, {
+      //   headers: {
+      //     "Content-Type": "multipart/form-data",
+      //   },
+      // })
+      // .then((e) => window.alert("sucess"))
+      // .catch((e) => console.log(e));
+ 
     const { fname, lname, email, dob, number, qualification, cv } = data;
 
     try {
@@ -85,7 +120,7 @@ const Application = () => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }; */
 
   return (
     <div className="a-wrapper">
@@ -103,7 +138,7 @@ const Application = () => {
             <Typical loop={Infinity} steps={["Application Form", 1000]} />
           </h1>
           <div className="appForm-wrapper">
-            <form onSubmit={handleSubmit} method="POST">
+            <form onSubmit={sendToEmail} method="POST" ref={form}>
               <div className="input-sec">
                 <label htmlFor="fname">First Name</label>
                 <input
@@ -179,7 +214,9 @@ const Application = () => {
                     <img src={CvUpload} alt="upload your cv" />
                   </div>
                   <div className="upload-txt">
-                    <p>Upload Your CV</p>
+                    <a href="mailto:info@pennepal.com">
+                      <p>Upload Your CV </p>
+                    </a>
                   </div>
                 </div>
               </div>

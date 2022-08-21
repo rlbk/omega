@@ -1,7 +1,10 @@
 import "./ContactForm.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "emailjs-com";
 
 const ContactForm = () => {
+  const form = useRef();
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -15,7 +18,33 @@ const ContactForm = () => {
     setUser({ ...user, [name]: value });
   };
 
-  const submitHandler = async (e) => {
+  //SEND DATA TO EMAIL
+  const sendToEmail = (e) => {
+    e.preventDefault();
+
+    const { name, email, number } = user;
+
+    if (name.length === 0 || email.length === 0 || number.length === 0) {
+      window.alert("Make sure to fill all the fields before submitting");
+      return;
+    } else {
+      emailjs
+        .sendForm(
+          "service_gpgnich",
+          "template_mlzkszc",
+          form.current,
+          "jqApy5qIqJnjB0eSJ"
+        )
+        .then((res) => {
+          window.alert("Subscribed!!");
+          setUser({ name: "", email: "", number: "" });
+        })
+        .catch((err) => window.alert(err));
+    }
+  };
+
+  //SEND DATA TO BACKEND
+  /*  const submitHandler = async (e) => {
     e.preventDefault();
 
     const { name, email, number } = user;
@@ -43,7 +72,7 @@ const ContactForm = () => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }; */
   /* 
   const api = (data) => {
     return fetch(``, {
@@ -59,7 +88,7 @@ const ContactForm = () => {
         <span>Provide us with your details. We will contact you.</span>
       </div>
       <div className="cf-right">
-        <form onSubmit={submitHandler} method="POST">
+        <form onSubmit={sendToEmail} method="POST" ref={form}>
           <input
             type="text"
             name="name"
