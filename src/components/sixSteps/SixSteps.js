@@ -69,24 +69,85 @@ const SixSteps = () => {
         You dream, we are there to assist you for a golden and bright future.
       </h2>
       <div className="s-steps">
-        {sixSteps.map((step, index) => {
-          const fadeAni = index % 2 ? "fade-right" : "fade-left";
-          return (
-            <div
-              data-aos={fadeAni}
-              data-aos-offset="200"
-              className="steps"
-              key={index}
-            >
-              <h1>{step.title}</h1>
-              <img src={step.img} alt="" />
-              <p>{step.desc}</p>
-            </div>
-          );
-        })}
+        <div
+          data-aos="zoom-in-down"
+          data-aos-offset="300"
+          data-aos-duration="500"
+          className="steps"
+        >
+          <h1>{sixSteps[0].title}</h1>
+          <img src={sixSteps[0].img} alt="" />
+          <p>{sixSteps[0].desc}</p>
+        </div>
+        <div
+          data-aos="zoom-in-down"
+          data-aos-offset="300"
+          data-aos-duration="500"
+          className="steps"
+        >
+          <h1>{sixSteps[1].title}</h1>
+          <img src={sixSteps[1].img} alt="" />
+          <p>{sixSteps[1].desc}</p>
+        </div>
+        <div
+          data-aos="zoom-in-down"
+          data-aos-offset="300"
+          data-aos-duration="500"
+          className="steps"
+        >
+          <h1>{sixSteps[2].title}</h1>
+          <img src={sixSteps[2].img} alt="" />
+          <p>{sixSteps[2].desc}</p>
+        </div>
+        <div
+          data-aos="zoom-in-down"
+          data-aos-offset="300"
+          data-aos-duration="500"
+          className="steps"
+        >
+          <h1>{sixSteps[3].title}</h1>
+          <img src={sixSteps[3].img} alt="" />
+          <p>{sixSteps[3].desc}</p>
+        </div>
+        <div
+          data-aos="zoom-in-down"
+          data-aos-offset="300"
+          data-aos-duration="500"
+          className="steps"
+        >
+          <h1>{sixSteps[4].title}</h1>
+          <img src={sixSteps[4].img} alt="" />
+          <p>{sixSteps[4].desc}</p>
+        </div>
+        <div
+          data-aos="zoom-in-down"
+          data-aos-offset="300"
+          data-aos-duration="500"
+          className="steps"
+        >
+          <h1>{sixSteps[5].title}</h1>
+          <img src={sixSteps[5].img} alt="" />
+          <p>{sixSteps[5].desc}</p>
+        </div>
       </div>
     </div>
   );
 };
 
 export default SixSteps;
+
+/* {sixSteps.map((step, index) => {
+      const fadeAni = index % 2 ? "fade-right" : "fade-left";
+      return (
+        <div
+          data-aos={fadeAni}
+          data-aos-offset="200"
+          className="steps"
+          key={index}
+        >
+          <h1>{step.title}</h1>
+          <img src={step.img} alt="" />
+          <p>{step.desc}</p>
+        </div>
+      );
+    })} */

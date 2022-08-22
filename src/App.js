@@ -25,6 +25,12 @@ function App() {
 }
 
 function HomePage() {
+  /*  function refreshPage() {
+ 
+      window.location.reload(false);
+      
+    
+  } */
   return (
     <div className="App">
       <Intro />
