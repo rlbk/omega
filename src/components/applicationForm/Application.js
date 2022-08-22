@@ -27,8 +27,14 @@ const Application = () => {
     setData({ ...data, [name]: value });
   };
 
-  //SEND TO EMAIL
+  //FOR STATIC
   const sendToEmail = (e) => {
+    e.preventDefault();
+    window.alert("It's just static code");
+  };
+
+  //SEND TO EMAIL
+  /*  const sendToEmail = (e) => {
     e.preventDefault();
 
     const { fname, lname, email, dob, number, qualification } = data;
@@ -57,7 +63,7 @@ const Application = () => {
         })
         .catch((err) => window.alert(err));
     }
-  };
+  }; */
 
   //SEND DATA TO BACKEND
   /*  const handleSubmit = async (e) => {

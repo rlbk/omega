@@ -18,8 +18,16 @@ const ContactForm = () => {
     setUser({ ...user, [name]: value });
   };
 
-  //SEND DATA TO EMAIL
+  //FOR STATIC
+
   const sendToEmail = (e) => {
+    e.preventDefault();
+
+    console.alert("It's just static code");
+  };
+
+  //SEND DATA TO EMAIL
+  /* const sendToEmail = (e) => {
     e.preventDefault();
 
     const { name, email, number } = user;
@@ -42,7 +50,7 @@ const ContactForm = () => {
         .catch((err) => window.alert(err));
     }
   };
-
+ */
   //SEND DATA TO BACKEND
   /*  const submitHandler = async (e) => {
     e.preventDefault();
